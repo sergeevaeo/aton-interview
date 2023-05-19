@@ -1,7 +1,7 @@
 package com.aton.interview.task1;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Order order = new Order();
         order.addPerson("Joey");
         order.addPerson("Chandler");
@@ -39,5 +39,9 @@ public class Main {
         chandler.start();
         phoebe.start();
         monica.start();
+        joey.join();
+        chandler.join();
+        phoebe.join();
+        monica.join();
     }
 }
