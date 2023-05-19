@@ -24,7 +24,7 @@ public class Person extends Thread {
     @Override
     public void run() {
         synchronized (order) {
-            while (!order.peopleOrder.isEmpty()) {
+            while (!order.getPeopleOrder().isEmpty()) {
                 if (order.getPerson().equals(name)) {
                     System.out.println(name + ": " + lines.remove(0));
                     order.removePerson(); // удаление из очереди

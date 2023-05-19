@@ -1,27 +1,24 @@
 package com.aton.interview.task1;
 
+import net.jcip.annotations.NotThreadSafe;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
+@NotThreadSafe
 public class Order {
-    public Queue<String> peopleOrder;
+    private final Queue<String> peopleOrder;
 
     public Order() {
         peopleOrder = new LinkedList<>();
-        peopleOrder.add("Joey");
-        peopleOrder.add("Chandler");
-        peopleOrder.add("Phoebe");
-        peopleOrder.add("Chandler");
-        peopleOrder.add("Joey");
-        peopleOrder.add("Chandler");
-        peopleOrder.add("Phoebe");
-        peopleOrder.add("Joey");
-        peopleOrder.add("Monica");
-        peopleOrder.add("Phoebe");
-        peopleOrder.add("Chandler");
-        peopleOrder.add("Joey");
-        peopleOrder.add("Chandler");
-        peopleOrder.add("Joey");
+    }
+
+    public void addPerson(String person) {
+        peopleOrder.add(person);
+    }
+
+    public Queue<String> getPeopleOrder() {
+        return peopleOrder;
     }
 
     public String getPerson() {

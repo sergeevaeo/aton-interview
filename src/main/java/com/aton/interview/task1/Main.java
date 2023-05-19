@@ -3,6 +3,20 @@ package com.aton.interview.task1;
 public class Main {
     public static void main(String[] args) {
         Order order = new Order();
+        order.addPerson("Joey");
+        order.addPerson("Chandler");
+        order.addPerson("Phoebe");
+        order.addPerson("Chandler");
+        order.addPerson("Joey");
+        order.addPerson("Chandler");
+        order.addPerson("Phoebe");
+        order.addPerson("Joey");
+        order.addPerson("Monica");
+        order.addPerson("Phoebe");
+        order.addPerson("Chandler");
+        order.addPerson("Joey");
+        order.addPerson("Chandler");
+        order.addPerson("Joey");
         Person chandler = new Person(order, "Chandler");
         chandler.addPhrase("Hey.");
         chandler.addPhrase("And this from the cry-for-help department. Are you wearing make up?");
