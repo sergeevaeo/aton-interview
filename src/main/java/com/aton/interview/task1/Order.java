@@ -1,13 +1,13 @@
 package com.aton.interview.task1;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Order {
-    public List<String> peopleOrder;
+    public Queue<String> peopleOrder;
 
     public Order() {
-        peopleOrder = new ArrayList<>();
+        peopleOrder = new LinkedList<>();
         peopleOrder.add("Joey");
         peopleOrder.add("Chandler");
         peopleOrder.add("Phoebe");
@@ -25,10 +25,10 @@ public class Order {
     }
 
     public String getPerson() {
-        return peopleOrder.get(0);
+        return peopleOrder.peek();
     }
 
     public void removePerson() {
-        peopleOrder.remove(0);
+        peopleOrder.remove();
     }
 }
